@@ -510,5 +510,21 @@ body{
     .content {
         margin-bottom: 60px; /* تنظیم فاصله فقط برای منوبار */
     }
+    .about-grid {
+        display: flex;
+        flex-direction: column; /* تغییر جهت به ستون */
+    }
+    .about-card {
+        order: -1; /* نمایش بخش درباره من در بالای تعداد پروژه‌ها */
+    }
+    .about-stats {
+        order: 1; /* نمایش تعداد پروژه‌ها در پایین */
+    }
+    .about-stats {
+    display: flex;
+    align-items: center; /* قرار دادن آیتم‌ها در مرکز */
+    justify-content: center; /* تنظیم چینش عمودی */
+    gap: 12px; /* فاصله بین آیتم‌ها */
+}
 }
 
