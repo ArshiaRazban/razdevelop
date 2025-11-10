@@ -4,7 +4,7 @@ const header = document.getElementById('header');
 
 // active link on scroll
 const setActive = () => {
-  const y = window.scrollY + window.innerHeight / 2; // تنظیم دقیق‌تر برای فعال‌سازی لینک
+  const y = window.scrollY + window.innerHeight / 2 ;
   let current = 'home';
   for (const s of sections) {
     if (y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) {
