@@ -159,6 +159,7 @@ body {
   box-shadow: 0 10px 40px 10px rgba(0, 201, 80, .35);
 } */
 
+
 /* terminal loader */
 
 @keyframes blinkCursor {
@@ -176,7 +177,7 @@ body {
 
   45%,
   55% {
-    width: 10.2em;
+    width: 8.2em;
   }
 
   /* adjust width based on content */
@@ -228,7 +229,7 @@ body {
   border-right: 0.5em solid green;
   /* Cursor */
   animation:
-    typeAndDelete 4s steps(17) infinite,
+    typeAndDelete 4s steps(14) infinite,
     blinkCursor 0.5s step-end infinite alternate;
   margin-top: 1.5em;
 }
