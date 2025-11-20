@@ -195,7 +195,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-size: 1em;
   padding: 1.5em 1em;
-  width: 20rem;
+  width: 24rem;
   box-shadow: 0 10px 10px 10px rgba(0, 201, 80, .35);
   border-radius: 4px;
   position: relative;
@@ -230,7 +230,7 @@ body {
   /* Cursor */
   animation:
     typeAndDelete 4s steps(14) infinite,
-    blinkCursor 0.5s step-end infinite alternate;
+    blinkCursor .5s step-end infinite alternate;
   margin-top: 1.5em;
 }
 
