@@ -195,7 +195,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-size: 1em;
   padding: 1.5em 1em;
-  width: 24rem;
+  width: 21rem;
   box-shadow: 0 10px 10px 10px rgba(0, 201, 80, .35);
   border-radius: 4px;
   position: relative;
@@ -607,7 +607,7 @@ body {
   }
 
   .menu-link i {
-    font-size: 16px
+    font-size: 2rem
   }
 
   .brand span {
