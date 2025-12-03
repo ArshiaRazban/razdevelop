@@ -551,6 +551,10 @@ body {
   flex-wrap: wrap;
 }
 
+.input-tel{
+  margin: 1rem;
+}
+
 .input-field,
 select {
   flex: 1 1 100%;
