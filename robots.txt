@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://razdevelop.netlify.app/sitemap.xml

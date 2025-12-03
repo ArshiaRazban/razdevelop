@@ -1,6 +1,7 @@
 :root {
   --bg: #09090b;
   /* dark gray from palette */
+  --bg-transparent: rgba(24, 24, 27, 0.65);
   --card: #18181b;
   /* glass dark gray */
   --text: #f9fafb;
@@ -21,6 +22,8 @@
   justify-content: center;
   text-align: center;
   align-items: center;
+  font-family: Almarai;
+  font-weight: 700;
 }
 
 html,
@@ -46,8 +49,10 @@ body {
   position: fixed;
   inset: 0 0 auto 0;
   height: 70px;
-  background: #09090b;
-  backdrop-filter: blur(10px);
+  background: var(--bg-transparent);
+  border: 1px solid var(--card);
+  box-shadow: 0 0 40px var(--bg);
+  backdrop-filter: blur(20px);
   border-bottom: 1px solid #09090b;
   display: flex;
   align-items: center;
@@ -86,7 +91,7 @@ body {
   padding: 8px 16px;
   color: var(--muted);
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 20x;
   transition: .2s;
   font-size: 14px;
 }
@@ -95,9 +100,12 @@ body {
   font-size: 18px;
 }
 
-.menu-link:hover,.menu-link.active {
+.menu-link:hover,
+.menu-link.active {
   color: var(--primary);
   background: rgba(24, 24, 27, 0.8);
+  border-radius: 20px;
+  border: 1px solid;
   /* تغییر رنگ هاور برای وضوح بیشتر */
   box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.6) inset;
 }
@@ -129,7 +137,7 @@ body {
 
 /* hero */
 .hero {
-   min-height: 50vh;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: 1.2fr .8fr;
   gap: 28px;
@@ -183,7 +191,7 @@ body {
   /* adjust width based on content */
   90%,
   100% {
-    width: 0  ;
+    width: 0;
   }
 }
 
@@ -197,7 +205,7 @@ body {
   padding: 1.5em 1em;
   width: 21rem;
   box-shadow: 0 10px 10px 10px rgba(0, 201, 80, .35);
-  border-radius: 4px;
+  border-radius: 12px;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
@@ -243,7 +251,7 @@ body {
   color: var(--text);
   border: 2px solid #09090b;
   padding: 10px 16px;
-  border-radius: 12px;
+  border-radius: 20px;
   transition: .2s;
 }
 
@@ -286,7 +294,7 @@ body {
 .about-card {
   background: var(--card);
   border: 1px solid #09090b;
-  border-radius: 14px;
+  border-radius: 20px;
   padding: 20px;
 }
 
@@ -311,7 +319,7 @@ body {
 .about-stats li {
   background: linear-gradient(180deg, #09090b, #09090b);
   border: 1px solid #09090b;
-  border-radius: 14px;
+  border-radius: 20px;
   padding: 14px;
   text-align: center;
 }
@@ -340,7 +348,7 @@ body {
 .skill {
   background: var(--card);
   border: 1px solid #09090b;
-  border-radius: 14px;
+  border-radius: 20px;
   padding: 16px
 }
 
@@ -357,7 +365,7 @@ body {
 .bar {
   height: 8px;
   background: #09090b;
-  border-radius: 999px;
+  border-radius: 20px;
   overflow: hidden
 }
 
@@ -367,54 +375,335 @@ body {
   background: linear-gradient(90deg, var(--primary), var(--accent))
 }
 
-
+/* ----------------------------------------------------------------------------------------------------------------- */
 /* work */
+/* گرید اصلی — دسکتاپ */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  align-items: stretch;
 }
 
+/* کارت پروژه */
 .work-card {
-  position: relative;
+  background: var(--bg-transparent);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
   overflow: hidden;
-  border-radius: 16px;
-  border: 1px solid #09090b;
-  background: #09090b
-}
-
-.work-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: transform .35s ease
-}
-
-.work-card:hover img {
-  transform: scale(1.06)
-}
-
-.work-info {
-  position: absolute;
-  inset: auto 0 0 0;
-  background: linear-gradient(180deg, transparent, rgba(16, 24, 40, .8));
-  padding: 14px;
+  padding-bottom: 15px;
+  transition: 0.3s ease;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px
+  flex-direction: column;
+}
+
+/* افکت hover جذاب */
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* تصویر کارت */
+.work-card img {
+  width: 120%;
+  border-bottom: 3px solid #222;
+  object-fit: cover;
+}
+
+/* بخش پایین کارت */
+.work-info {
+  padding: 15px;
+  text-align: center;
 }
 
 .work-info h3 {
-  margin: 0;
-  font-size: 16px
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 700;
 }
+
+/* دکمه‌ها */
+.work-info .btn.tiny,
+.work-info .order-btn {
+  padding: 10px 18px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.work-info a.btn {
+  background: transparent;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.work-info button.order-btn {
+  background: transparent;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  background: 0;
+
+}
+
+.modal-content {
+  background-color: var(--card);
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ============================================================
+   BASE MODAL OVERLAY
+   ============================================================ */
+
+.modal.show {
+  display: flex;
+}
+
+/* ============================================================
+   MODAL CONTENT
+   ============================================================ */
+.modal-content {
+  width: 100%;
+  max-width: 950px;
+  background: rgba(24, 24, 27, 0.65);
+  border-radius: 26px;
+  padding: 28px;
+  position: relative;
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card);
+  box-shadow: 0 0 40px var(--bg);
+  animation: fadeUp .3s ease;
+}
+
+/* CLOSE BUTTON */
+.close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 34px;
+  cursor: pointer;
+  color: #fff;
+  transition: .2s;
+}
+
+.close:hover {
+  color: #ff4444;
+}
+
+/* ============================================================
+   FORM LAYOUT
+   ============================================================ */
+.form {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.form-left {
+  flex: 1 1 500px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* RIGHT SIDE (INFO) */
+.form-right {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px) brightness(0.8);
+  text-align: center;
+}
+
+/* ============================================================
+   INPUTS
+   ============================================================ */
+.input-wrapper {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.input-field,
+select {
+  flex: 1 1 100%;
+  padding: 13px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: .2s ease;
+}
+
+.input-field:focus,
+select:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: var(--accent, #ffcc00);
+}
+
+/* TEXTAREA */
+textarea.input-field {
+  height: 140px;
+  resize: none;
+}
+
+/* ============================================================
+   SUBMIT BUTTON
+   ============================================================ */
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 14px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  background: linear-gradient(135deg, #ffcc00, #ffdf55);
+  transition: .3s;
+}
+
+.btn-submit:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+/* ============================================================
+   RIGHT-SIDE CONTACT INFO
+   ============================================================ */
+.contact-label {
+  opacity: .75;
+  margin-top: 18px;
+  font-size: 15px;
+}
+
+.contact-number {
+  font-size: 22px;
+  color: #ffcc00;
+  margin-top: 4px;
+  font-weight: 800;
+}
+
+.separator {
+  width: 60px;
+  height: 2px;
+  background: #ffffff30;
+  margin: 20px auto;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================
+   RESPONSIVENESS
+   ============================================================ */
+
+/* Phones 320px+ */
+@media (max-width: 520px) {
+
+  .modal-content {
+    padding: 18px;
+  }
+
+  .form-left,
+  .form-right {
+    padding: 15px;
+  }
+
+  .input-field,
+  select {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .close {
+    font-size: 28px;
+    right: 16px;
+    top: 14px;
+  }
+
+  .btn-submit {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 820px) {
+
+  .form {
+    flex-direction: column;
+  }
+
+  .form-left,
+  .form-right {
+    width: 100%;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .modal-content {
+    max-width: 1100px;
+    padding: 40px;
+  }
+
+  .input-field,
+  select {
+    font-size: 16px;
+  }
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------- */
 
 /* contact */
 .contact-card {
   background: var(--card);
+  backdrop-filter: blur(20px);
   border: 1px solid #09090b;
-  border-radius: 14px;
+  border-radius: 20px;
   padding: 20px;
   text-align: right;
   direction: rtl;
@@ -477,7 +766,7 @@ body {
   height: 40px;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 20px;
   text-decoration: none;
   color: var(--text);
   border: 1px solid #09090b;
@@ -530,7 +819,8 @@ body {
     width: 100%;
     height: 60px;
     /* تنظیم ارتفاع مناسب */
-    background: #09090b;
+    background: transparent;
+    backdrop-filter: blur(20px);
     border-top: 1px solid #18181b;
     border-bottom: none;
     /* حذف خط پایین */
@@ -617,19 +907,14 @@ body {
 }
 
 @media (max-width: 480px) {
-  body {
-    background: radial-gradient(1200px 800px at 10% -10%, rgba(0, 201, 80, 0.15), transparent),
-      radial-gradient(1000px 700px at 110% 10%, rgba(5, 223, 114, 0.12), transparent),
-      linear-gradient(180deg, #09090b, #1a1a1d);
-    /* اضافه کردن خاکستری به پس‌زمینه */
-  }
 
   .content {
     padding: 20px 16px
   }
 
   .section {
-    padding: 40px 0
+    padding: 40px 0;
+    /* background-color: transparent; */
   }
 
   .hero-text h1 {

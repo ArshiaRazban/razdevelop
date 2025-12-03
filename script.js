@@ -28,12 +28,45 @@ links.forEach(a => a.addEventListener('click', e => {
 // header scroll effect
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) { 
-    header.style.background = 'rgba(9, 9, 11, 0.95)';
+    header.style.background = 'rgba(24, 24, 27, 0.65)';
     header.style.backdropFilter = 'blur(20px)';
   } else {
-    header.style.background = '#09090b';
-    header.style.backdropFilter = 'blur(10px)';
+    header.style.background = 'rgba(24, 24, 27, 0.65)';
+    header.style.backdropFilter = 'blur(20px)';
   }
 });
 
+// for button portfolios
 
+document.addEventListener('DOMContentLoaded', () => {
+    const orderBtns = document.querySelectorAll('.order-btn');
+    const modal = document.getElementById('orderModal');
+    const closeBtn = document.querySelector('.modal .close');
+    const projectInput = document.getElementById('projectInput');
+    const orderForm = document.getElementById('orderForm');
+
+    // باز کردن مودال
+    orderBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            projectInput.value = btn.dataset.project;
+            modal.style.display = 'block';
+        });
+    });
+
+    // بستن مودال
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+    });
+
+    // ارسال فرم
+    orderForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert(`سفارش پروژه "${projectInput.value}" ثبت شد!`);
+        orderForm.reset();
+        modal.style.display = 'none';
+    });
+});
