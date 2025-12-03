@@ -4,12 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById('orderModal');
     const closeBtn = document.querySelector('.modal .close');
     const projectInput = document.getElementById('projectInput');
+    const githubInput = document.getElementById('githubInput');
     const orderForm = document.getElementById('orderForm');
 
-    // باز کردن مودال + ست پروژه
+    // باز کردن مودال + ست پروژه و لینک گیت
     orderBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             projectInput.value = btn.dataset.project;
+            githubInput.value = btn.dataset.github || ""; // اگر لینک نبود خالی میشه
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
         });
@@ -36,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let phone = orderForm.querySelector("input[name='phone']").value.trim();
         let message = orderForm.querySelector("textarea[name='message']").value.trim();
         let project = projectInput.value.trim();
+        let github = githubInput.value.trim();
 
         if (!name || !phone) {
             alert("لطفاً نام و شماره تماس را وارد کنید");
@@ -47,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "👤 *نام:* " + name + "\n" +
             "📞 *شماره تماس:* " + phone + "\n" +
             "📌 *پروژه انتخابی:* " + project + "\n" +
+            "💻 *لینک GitHub:* " + github + "\n" +
             "📝 *توضیحات:* " + message;
 
         let encoded = encodeURIComponent(finalMessage);

@@ -545,7 +545,7 @@ body {
    ============================================================ */
 .input-wrapper {
   display: flex;
-  gap: 12px;
+  gap:1rem;
   margin-bottom: 14px;
   width: 100%;
   flex-wrap: wrap;
