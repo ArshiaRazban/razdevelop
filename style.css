@@ -135,6 +135,10 @@ body {
   font-size: 28px;
 }
 
+.section#contact.section.contact{
+  margin-bottom: 2rem;
+}
+
 /* hero */
 .hero {
   min-height: 50vh;
