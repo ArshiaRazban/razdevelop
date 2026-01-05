@@ -1,16 +1,19 @@
 :root {
-  /* core colors & tokens (merged) */
   --bg: #09090b;
+  /* dark gray from palette */
   --bg-transparent: rgba(24, 24, 27, 0.65);
   --card: #18181b;
+  /* glass dark gray */
   --text: #f9fafb;
+  /* light gray from palette */
   --muted: #6a7282;
+  /* medium gray from palette */
   --primary: #00c950;
+  /* green from palette */
   --primary-2: #05df72;
+  /* lighter green from palette */
   --accent: #7bf1a8;
-  --gradient: linear-gradient(135deg, var(--primary), var(--primary-2));
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  /* light green accent */
   --ring: rgba(0, 201, 80, .35);
 }
 
@@ -27,10 +30,6 @@ html,
 body {
   height: 100%
 }
-
-/* html{
-    font-size: 62.5%;
-} */
 
 body {
   margin: 0;
@@ -70,7 +69,6 @@ body {
   color: var(--text);
   text-decoration: none;
   font-weight: 700;
-  font-size: large;
   letter-spacing: .3px;
 }
 
@@ -129,7 +127,7 @@ body {
 
 /* sections */
 .section {
-  padding: 80px 20px;
+  padding: 80px 0;
 }
 
 .section-title {
@@ -168,6 +166,10 @@ body {
   display: flex;
   gap: 12px;
 }
+
+/* .hero-media .glass-card {
+  box-shadow: 0 10px 40px 10px rgba(0, 201, 80, .35);
+} */
 
 
 /* terminal loader */
@@ -280,19 +282,11 @@ body {
   width: 100%;
 }
 
-/* =================================================================== */
-/* ============================== about ============================== */
-/* =================================================================== */
-
+/* about */
 .about-stats {
-  min-height: 50%;
   justify-content: center;
   text-align: center;
   align-items: center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin: 3rem 0;
 }
 
 .about-grid {
@@ -302,8 +296,9 @@ body {
 }
 
 .about-card {
-  background: var(--card);
+  background: var(--bg-transparent);
   border: 1px solid #09090b;
+  backdrop-filter: blur(20px);
   border-radius: 20px;
   padding: 20px;
 }
@@ -312,7 +307,7 @@ body {
   margin: 0 0 10px;
 }
 
-.about-card p {
+.about-card p, .about-card li {
   margin: 0;
   color: var(--muted);
 }
@@ -346,6 +341,7 @@ body {
   color: var(--muted);
   font-size: 13px
 }
+
 
 /* skills */
 .skills-grid {
@@ -396,9 +392,6 @@ body {
 }
 
 /* کارت پروژه */
-/* ======================================================================================================================================= */
-
-/* ======================================================================================================================================= */
 .work-card {
   background: var(--bg-transparent);
   backdrop-filter: blur(5px);
@@ -760,40 +753,20 @@ textarea.input-field {
 }
 
 /* footer */
-
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2rem 9%;
-    background: var(--bg-transparent);
-    border-top: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 36px 0;
+  color: var(--muted);
+  border-top: 1px solid #09090b;
+  margin-top: 40px;
 }
 
-.footer-text p {
-    font-size: 1.6rem;
-    color: #9ca3af;
-}
-
-.footer-iconTop a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: .8rem;
-    background: var(--gradient);
-    border-radius: .8rem;
-    transition: all 0.3s ease;
-}
-
-.footer-iconTop a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(24, 24, 27, .6);
-}
-
-.footer-iconTop a i {
-    font-size: 2.4rem;
-    color: white;
+.footer p {
+  margin: 0;
+  font-size: 14px;
 }
 
 .to-top {
@@ -814,8 +787,6 @@ textarea.input-field {
   background: #09090b;
   transform: translateY(-2px);
 }
-
-
 
 /* header responsive states */
 
@@ -1024,22 +995,4 @@ textarea.input-field {
     gap: 12px;
     /* فاصله بین آیتم‌ها */
   }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--gradient);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
 }
