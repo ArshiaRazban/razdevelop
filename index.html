@@ -66,62 +66,100 @@
         rel="stylesheet preload">
 
     <!-- styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
 
     <!-- header navigation -->
-    <header class="header" id="header">
-        <a href="#home" class="brand">
-            <!-- <i class='bx bx-shape-polygon'></i> -->
-            <span>Raz Develop</span>
-        </a>
-        <nav class="menu">
-            <a href="#home" class="menu-link active"><i class='bx bx-home'></i><span>خانه</span></a>
-            <a href="html/about.html" class="menu-link"><i class='bx bx-user'></i><span>درباره</span></a>
-            <a href="html/restaurant-menu.html" class="menu-link"><i class='bx bx-bulb'></i><span>منو دیجیتال</span></a>
-            <a href="#work" class="menu-link"><i class='bx bx-layout'></i><span>نمونه‌کار</span></a>
-            <a href="html/services.html" class="menu-link"><i class='bx bx-envelope'></i><span>ارتباط</span></a>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark" dir="ltr">
+            <div class="container-fluid">
+
+                <!-- Brand -->
+                <a class="navbar-brand fw-semibold fs-4" href="#home">
+                    Raz Develop
+                </a>
+
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu -->
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3" dir="rtl">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">
+                                <i class='bx bx-home'></i> خانه
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="html/about.html">
+                                <i class='bx bx-user'></i> درباره
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="html/restaurant-menu.html">
+                                <i class='bx bx-restaurant'></i> منو دیجیتال
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#work">
+                                <i class='bx bx-layout'></i> نمونه‌کار
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="html/services.html">
+                                <i class='bx bx-envelope'></i> ارتباط
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </nav>
     </header>
-
 
 
     <!-- main content -->
     <main class="content">
         <!-- hero -->
-        <section id="home" class="section hero">
-            <div class="hero-text">
-                <h1>طراحی مدرن وب</h1>
-                <p>طراحی وب سایت و منو با بروزترین روشهای دنیا</p>
-                <div class="hero-actions">
-                    <a href="#work" class="btn primary">مشاهده کارها</a>
-                    <a href="services.html" class="btn ghost">ارتباط</a>
-                </div>
-            </div>
-            <div class="hero-media">
-                <div class="glass-card">
-                    <div class="terminal-loader">
-                        <div class="terminal-header">
-                            <div class="terminal-title">Status</div>
+        <section id="home" class="section">
+            <div class="container">
+                <div class="row align-items-center gy-4">
+                    <div class="col-lg-7 col-12 hero-text">
+                        <h1>طراحی مدرن وب</h1>
+                        <p>طراحی وب سایت و منو با بروزترین روشهای دنیا</p>
+                        <div class="d-flex flex-column flex-sm-row gap-2">
+                            <a href="#work" class="btn primary">مشاهده کارها</a>
+                            <a href="services.html" class="btn ghost">ارتباط</a>
                         </div>
-                        <div class="text">Web Developer</div>
                     </div>
-
+                    <div class="col-lg-5 col-12 hero-media">
+                        <div class="glass-card">
+                            <div class="terminal-loader">
+                                <div class="terminal-header">
+                                    <div class="terminal-title">Status</div>
+                                </div>
+                                <div class="text">Web Developer</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- about -->
         <section id="about" class="section about">
-            <div class="about-grid">
-                <div class="about-card">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-7 col-10 order-2 order-lg-1 about-card">
                     <h2>درباره ما (رز دولوپ)</h2>
                     <p>فرانت‌اند دولوپری هستیم که روی رابط‌های کاربری سریع، در دسترس و چشم‌نواز تمرکز می‌کنیم. از طراحی
                         سیستم‌های بروز دنیا تا پیاده‌سازی پرفورمنس بالا با تکنولوژی‌های روز.</p>
                 </div>
-                <ul class="about-stats">
+                <ul class="col-lg-5 col-10 order-2 order-lg-1 about-stats">
                     <li><span class="num">4+</span><span class="label">سال تجربه</span></li>
                     <li><span class="num">30+</span><span class="label">پروژه انجام‌شده</span></li>
                     <!-- <li><span class="num">12</span><span class="label">مشتری راضی</span></li> -->
@@ -132,26 +170,26 @@
         <!-- skills -->
         <section id="skills" class="section skills">
             <h2 class="section-title">مهارت‌ها</h2>
-            <div class="skills-grid">
-                <div class="skill">
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-3 skill">
                     <i class="fa-brands fa-html5"></i>
                     <h3>HTML5</h3>
-                    <div class="bar"><span style="width: 92%"></span></div>
+                    <!-- <div class="bar"><span style="width: 92%"></span></div> -->
                 </div>
-                <div class="skill">
+                <div class="col-6 col-md-4 col-lg-3 skill">
                     <i class="fa-brands fa-css3-alt"></i>
                     <h3>CSS3</h3>
-                    <div class="bar"><span style="width: 92%"></span></div>
+                    <!-- <div class="bar"><span style="width: 92%"></span></div> -->
                 </div>
-                <div class="skill">
+                <div class="col-6 col-md-4 col-lg-3 skill">
                     <i class="fa-brands fa-js"></i>
                     <h3>JavaScript</h3>
-                    <div class="bar"><span style="width: 50%"></span></div>
+                    <!-- <div class="bar"><span style="width: 50%"></span></div> -->
                 </div>
-                <div class="skill">
+                <div class="col-6 col-md-4 col-lg-3 skill">
                     <i class="fa-brands fa-bootstrap"></i>
                     <h3>Bootstrap</h3>
-                    <div class="bar"><span style="width: 50%"></span></div>
+                    <!-- <div class="bar"><span style="width: 92%"></span></div> -->
                 </div>
             </div>
         </section>
@@ -160,134 +198,159 @@
         <section id="work" class="section work">
             <h2 class="section-title">نمونه‌کار</h2>
             <h2 id="section-title">برای نمایش بهتر نمونه های سه بعدی با نمایشگرهای بزرگ وارد شوید</h2>
-            <div class="work-grid">
+            <div class="row g-4">
 
-                <article class="work-card">
-                    <img src="img/coffee_shop_website_Global.webp" loading="lazy" decoding="async"
-                        alt="طراحی سایت کافی‌شاپ حرفه‌ای با منوی دیجیتال و ظاهر مدرن — نمونه‌کار RazDevelop">
-                    <div class="work-info">
-                        <h3>سایت کافی شاپ</h3>
-                        <a href="https://arshiarazban.github.io/coffee_shop_website_Global/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn"
-                            data-github="https://github.com/arshiarazban/coffee_shop_global"
-                            data-project="سایت کافی شاپ">ثبت سفارش</button>
-                    </div>
-                </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="work-card">
+                        <img src="img/coffee_shop_website_Global.webp" loading="lazy" decoding="async"
+                            alt="طراحی سایت کافی‌شاپ حرفه‌ای با منوی دیجیتال و ظاهر مدرن — نمونه‌کار RazDevelop">
+                        <div class="work-info">
+                            <h3>سایت کافی شاپ</h3>
+                            <a href="https://arshiarazban.github.io/coffee_shop_website_Global/"
+                                class="btn tiny">مشاهده</a>
+                            <button class="btn tiny order-btn"
+                                data-github="https://github.com/arshiarazban/coffee_shop_global"
+                                data-project="سایت کافی شاپ">ثبت سفارش</button>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="work-card">
-                    <img src="img/3D_web_Portfolio.webp" loading="lazy" decoding="async"
-                        alt="نمونه‌کار طراحی سایت سه‌بعدی با رابط کاربری مدرن — RazDevelop">
-                    <div class="work-info">
-                        <h3>سایت 3بعدی</h3>
-                        <a href="https://arshiarazban.github.io/Portfolio_4/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn" data-github="https://arshiarazban.github.io/Portfolio_4/"
-                            data-project="سایت 3بعدی">ثبت سفارش</button>
-                    </div>
-                </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="work-card">
+                        <img src="img/3D_web_Portfolio.webp" loading="lazy" decoding="async"
+                            alt="نمونه‌کار طراحی سایت سه‌بعدی با رابط کاربری مدرن — RazDevelop">
+                        <div class="work-info">
+                            <h3>سایت 3بعدی</h3>
+                            <a href="https://arshiarazban.github.io/Portfolio_4/" class="btn tiny">مشاهده</a>
+                            <button class="btn tiny order-btn" data-github="https://arshiarazban.github.io/Portfolio_4/"
+                                data-project="سایت 3بعدی">ثبت سفارش</button>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="work-card">
-                    <img src="img/Fruit-Soda-web.webp" loading="lazy" decoding="async"
-                        alt="نمونه‌کار طراحی سایت سه‌بعدی مناسب معرفی رستوران و کافه — RazDevelop">
-                    <div class="work-info">
-                        <h3>سایت 3بعدی(2)</h3>
-                        <a href="https://arshiarazban.github.io/Fruit-Soda-web/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn" data-github="https://arshiarazban.github.io/Fruit-Soda-web/"
-                            data-project="سایت 3بعدی(2)">ثبت سفارش</button>
-                    </div>
-                </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="work-card">
+                        <img src="img/Fruit-Soda-web.webp" loading="lazy" decoding="async"
+                            alt="نمونه‌کار طراحی سایت سه‌بعدی مناسب معرفی رستوران و کافه — RazDevelop">
+                        <div class="work-info">
+                            <h3>سایت 3بعدی(2)</h3>
+                            <a href="https://arshiarazban.github.io/Fruit-Soda-web/" class="btn tiny">مشاهده</a>
+                            <button class="btn tiny order-btn"
+                                data-github="https://arshiarazban.github.io/Fruit-Soda-web/"
+                                data-project="سایت 3بعدی(2)">ثبت سفارش</button>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="work-card">
-                    <img src="img/coffee_shop_website_IR.webp" loading="lazy" decoding="async"
-                        alt="طراحی سایت فروشگاه قهوه با تجربه کاربری روان و طراحی حرفه‌ای — RazDevelop">
-                    <div class="work-info">
-                        <h3>فروشگاه قهوه</h3>
-                        <a href="https://arshiarazban.github.io/coffee_shop_website_IR/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn"
-                            data-github="https://arshiarazban.github.io/coffee_shop_website_IR/"
-                            data-project="فروشگاه قهوه">ثبت سفارش</button>
-                    </div>
-                </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="work-card">
+                        <img src="img/coffee_shop_website_IR.webp" loading="lazy" decoding="async"
+                            alt="طراحی سایت فروشگاه قهوه با تجربه کاربری روان و طراحی حرفه‌ای — RazDevelop">
+                        <div class="work-info">
+                            <h3>فروشگاه قهوه</h3>
+                            <a href="https://arshiarazban.github.io/coffee_shop_website_IR/" class="btn tiny">مشاهده</a>
+                            <button class="btn tiny order-btn"
+                                data-github="https://arshiarazban.github.io/coffee_shop_website_IR/"
+                                data-project="فروشگاه قهوه">ثبت سفارش</button>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="work-card">
-                    <img src="img/neo_portfolio.webp" loading="lazy" decoding="async"
-                        alt="نمونه‌کار طراحی سایت شخصی با سبک مینیمال و مدرن — RazDevelop">
-                    <div class="work-info">
-                        <h3>سایت نِعو[سایت شخصی(2)]</h3>
-                        <a href="https://arshiarazban.github.io/neo_portfolio/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn" data-github="https://arshiarazban.github.io/neo_portfolio/"
-                            data-project="سایت نِعو[سایت شخصی(2)]">ثبت سفارش</button>
-                    </div>
-                </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="work-card">
+                        <img src="img/neo_portfolio.webp" loading="lazy" decoding="async"
+                            alt="نمونه‌کار طراحی سایت شخصی با سبک مینیمال و مدرن — RazDevelop">
+                        <div class="work-info">
+                            <h3>سایت نِعو[سایت شخصی(2)]</h3>
+                            <a href="https://arshiarazban.github.io/neo_portfolio/" class="btn tiny">مشاهده</a>
+                            <button class="btn tiny order-btn"
+                                data-github="https://arshiarazban.github.io/neo_portfolio/"
+                                data-project="سایت نِعو[سایت شخصی(2)]">ثبت سفارش</button>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="work-card">
-                    <img src="img/portfolio_1.webp" loading="lazy" decoding="async"
-                        alt="طراحی سایت شخصی حرفه‌ای با رابط کاربری ریسپانسیو — RazDevelop">
-                    <div class="work-info">
-                        <h3>سایت شخصی(1)</h3>
-                        <a href="https://arshiarazban.github.io/portfolio_1/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn" data-github="https://arshiarazban.github.io/portfolio_1/"
-                            data-project="سایت شخصی(1)">ثبت سفارش</button>
-                    </div>
-                </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="work-card">
+                        <img src="img/portfolio_1.webp" loading="lazy" decoding="async"
+                            alt="طراحی سایت شخصی حرفه‌ای با رابط کاربری ریسپانسیو — RazDevelop">
+                        <div class="work-info">
+                            <h3>سایت شخصی(1)</h3>
+                            <a href="https://arshiarazban.github.io/portfolio_1/" class="btn tiny">مشاهده</a>
+                            <button class="btn tiny order-btn" data-github="https://arshiarazban.github.io/portfolio_1/"
+                                data-project="سایت شخصی(1)">ثبت سفارش</button>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="work-card">
-                    <img src="img/portfolio_3.webp" loading="lazy" decoding="async"
-                        alt="نمونه‌کار طراحی سایت آموزشی و دانشگاهی با ساختار حرفه‌ای — RazDevelop">
-                    <div class="work-info">
-                        <h3>سایت دانشگاهی</h3>
-                        <a href="https://arshiarazban.github.io/portfolio_3/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn" data-github="https://arshiarazban.github.io/portfolio_3/"
-                            data-project="سایت دانشگاهی">ثبت سفارش</button>
-                    </div>
-                </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="work-card">
+                        <img src="img/portfolio_3.webp" loading="lazy" decoding="async"
+                            alt="نمونه‌کار طراحی سایت آموزشی و دانشگاهی با ساختار حرفه‌ای — RazDevelop">
+                        <div class="work-info">
+                            <h3>سایت دانشگاهی</h3>
+                            <a href="https://arshiarazban.github.io/portfolio_3/" class="btn tiny">مشاهده</a>
+                            <button class="btn tiny order-btn" data-github="https://arshiarazban.github.io/portfolio_3/"
+                                data-project="سایت دانشگاهی">ثبت سفارش</button>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="work-card">
-                    <img src="img/Technology_News_Agency.webp" loading="lazy" decoding="async"
-                        alt="طراحی سایت شرکتی با ظاهر رسمی و ریسپانسیو — نمونه‌کار RazDevelop">
-                    <div class="work-info">
-                        <h3>سایت شرکتی</h3>
-                        <a href="https://arshiarazban.github.io/Technology_News_Agency/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn"
-                            data-github="https://arshiarazban.github.io/Technology_News_Agency/"
-                            data-project="سایت شرکتی">ثبت سفارش</button>
-                    </div>
-                </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="work-card">
+                        <img src="img/Technology_News_Agency.webp" loading="lazy" decoding="async"
+                            alt="طراحی سایت شرکتی با ظاهر رسمی و ریسپانسیو — نمونه‌کار RazDevelop">
+                        <div class="work-info">
+                            <h3>سایت شرکتی</h3>
+                            <a href="https://arshiarazban.github.io/Technology_News_Agency/" class="btn tiny">مشاهده</a>
+                            <button class="btn tiny order-btn"
+                                data-github="https://arshiarazban.github.io/Technology_News_Agency/"
+                                data-project="سایت شرکتی">ثبت سفارش</button>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="work-card">
-                    <img src="img/panino menu.webp" loading="lazy" decoding="async"
-                        alt="طراحی منوی دیجیتال رستوران پانینو با گرافیک جذاب و سرعت بالا — RazDevelop">
-                    <div class="work-info">
-                        <h3>منوی رستوران پانینو</h3>
-                        <a href="https://paninosandwichbar.github.io/Menu/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn" data-github="https://paninosandwichbar.github.io/Menu/"
-                            data-project="منوی رستوران پانینو">ثبت سفارش</button>
-                    </div>
-                </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="work-card">
+                        <img src="img/panino menu.webp" loading="lazy" decoding="async"
+                            alt="طراحی منوی دیجیتال رستوران پانینو با گرافیک جذاب و سرعت بالا — RazDevelop">
+                        <div class="work-info">
+                            <h3>منوی رستوران پانینو</h3>
+                            <a href="https://paninosandwichbar.github.io/Menu/" class="btn tiny">مشاهده</a>
+                            <button class="btn tiny order-btn" data-github="https://paninosandwichbar.github.io/Menu/"
+                                data-project="منوی رستوران پانینو">ثبت سفارش</button>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="work-card">
-                    <img src="img/grilli.webp" loading="lazy" decoding="async"
-                        alt="نمونه‌کار طراحی منوی دیجیتال برای رستوران گریلی — RazDevelop">
-                    <div class="work-info">
-                        <h3>منوی رستوران گریلی</h3>
-                        <a href="https://arshiarazban.github.io/Restaurant_website_menu_grilli/"
-                            class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn"
-                            data-github="https://arshiarazban.github.io/Restaurant_website_menu_grilli/"
-                            data-project="منوی رستوران گریلی">ثبت سفارش</button>
-                    </div>
-                </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="work-card">
+                        <img src="img/grilli.webp" loading="lazy" decoding="async"
+                            alt="نمونه‌کار طراحی منوی دیجیتال برای رستوران گریلی — RazDevelop">
+                        <div class="work-info">
+                            <h3>منوی رستوران گریلی</h3>
+                            <a href="https://arshiarazban.github.io/Restaurant_website_menu_grilli/"
+                                class="btn tiny">مشاهده</a>
+                            <button class="btn tiny order-btn"
+                                data-github="https://arshiarazban.github.io/Restaurant_website_menu_grilli/"
+                                data-project="منوی رستوران گریلی">ثبت سفارش</button>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="work-card">
-                    <img src="img/coffee_websit.webp" loading="lazy" decoding="async"
-                        alt="طراحی منوی دیجیتال حرفه‌ای برای کافه رستوران — نمونه‌کار RazDevelop">
-                    <div class="work-info">
-                        <h3>منوی کافه رستوران</h3>
-                        <a href="https://arshiarazban.github.io/menu-coffeeshop/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn" data-github="https://arshiarazban.github.io/menu-coffeeshop/"
-                            data-project="منوی کافه رستوران">ثبت سفارش</button>
-                    </div>
-                </article>
-
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="work-card">
+                        <img src="img/coffee_websit.webp" loading="lazy" decoding="async"
+                            alt="طراحی منوی دیجیتال حرفه‌ای برای کافه رستوران — نمونه‌کار RazDevelop">
+                        <div class="work-info">
+                            <h3>منوی کافه رستوران</h3>
+                            <a href="https://arshiarazban.github.io/menu-coffeeshop/" class="btn tiny">مشاهده</a>
+                            <button class="btn tiny order-btn"
+                                data-github="https://arshiarazban.github.io/menu-coffeeshop/"
+                                data-project="منوی کافه رستوران">ثبت سفارش</button>
+                        </div>
+                    </article>
+                </div>
 
                 <!-- <article class="work-card">
                     <img src="img/Technology-and-business-information-site.webp" loading="lazy" decoding="async" alt="Technology-and-business-information-site">
@@ -316,14 +379,14 @@
                     </li>
                 </ul>
             </div>
-        </section>      
+        </section>
     </main>
 
     <!-- footer design -->
-        <footer class="footer">
-            <p>© 2025 Raz_develop Portfolio | همه حقوق محفوظ است.</p>
-            <a class="to-top" href="#home" aria-label="back to top"><i class='bx bx-up-arrow-alt'></i></a>
-        </footer>
+    <footer class="footer">
+        <p>© 2025 Raz_develop Portfolio | همه حقوق محفوظ است.</p>
+        <a class="to-top" href="#home" aria-label="back to top"><i class='bx bx-up-arrow-alt'></i></a>
+    </footer>
 
     <div id="orderModal" class="modal">
         <div class="modal-content">
@@ -398,6 +461,7 @@
         gtag('config', 'G-1714722546a466b9');
     </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 

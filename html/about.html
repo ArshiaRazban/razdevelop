@@ -3,112 +3,172 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>درباره RazDevelop | طراحی سایت مدرن</title>
-  <meta name="description" content="درباره RazDevelop، استودیوی طراحی وب با تمرکز بر طراحی مدرن، منوی دیجیتال و تجربه کاربری.">
+  <title>درباره | RazDevelop</title>
+  <meta name="description"
+    content="درباره RazDevelop، استودیوی طراحی وب با تمرکز بر طراحی مدرن، منوی دیجیتال و تجربه کاربری.">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Almarai:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Almarai:wght@400;700&display=swap"
+    rel="stylesheet">
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
 
-<header class="header">
-  <a href="../index.html" class="brand"><span>Raz Develop</span></a>
+  <!-- header navigation -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark" dir="ltr">
+      <div class="container-fluid">
 
-  <nav class="menu">
-    <a href="../index.html" class="menu-link"><i class='bx bx-home'></i><span>خانه</span></a>
-    <a href="about.html" class="menu-link active"><i class='bx bx-user'></i><span>درباره</span></a>
-    <a href="restaurant-menu.html" class="menu-link"><i class='bx bx-bulb'></i><span>منو دیجیتال</span></a>
-    <a href="services.html" class="menu-link"><i class='bx bx-briefcase'></i><span>خدمات</span></a>
-    <a href="contact.html" class="menu-link"><i class='bx bx-envelope'></i><span>ارتباط</span></a>
-  </nav>
-</header>
+        <!-- Brand -->
+        <a class="navbar-brand fw-semibold fs-4" href="#home">
+          Raz Develop
+        </a>
 
-<main class="content">
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <!-- intro -->
-  <section class="section">
-    <h1 class="section-title">درباره RazDevelop</h1>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3" dir="rtl">
+            <li class="nav-item">
+              <a class="nav-link active" href="../index.html">
+                <i class='bx bx-home'></i> خانه
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">
+                <i class='bx bx-user'></i> درباره
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="restaurant-menu.html">
+                <i class='bx bx-restaurant'></i> منو دیجیتال
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class='bx bx-layout'></i> نمونه‌کار
+              </a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">
+                <i class='bx bx-envelope'></i> ارتباط
+              </a>
+            </li>
+          </ul>
+        </div>
 
-    <div class="about-grid">
+      </div>
+    </nav>
+  </header>
 
-      <!-- image -->
-      <div class="about-image">
-        <img src="../img/sticker2.webp" alt="RazDevelop">
-        <div class="about-overlay">
-          <h3>RazDevelop</h3>
-          <p>Front-End & Web Design</p>
-          <div class="social-links">
-            <a href="#"><i class='bx bxl-github'></i></a>
-            <a href="#"><i class='bx bxl-instagram'></i></a>
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
+  <main class="content">
+
+    <!-- intro -->
+    <section class="section">
+      <h1 class="section-title">درباره RazDevelop</h1>
+
+      <div class="container">
+        <div class="row align-items-center gy-4">
+
+          <!-- image -->
+          <div class="col-lg-5 col-12">
+            <div class="about-image">
+              <img src="../img/sticker2.webp" alt="RazDevelop">
+              <div class="about-overlay">
+                <h3>RazDevelop</h3>
+                <p>Front-End & Web Design</p>
+                <div class="social-links">
+                  <a href="#"><i class='bx bxl-github'></i></a>
+                  <a href="#"><i class='bx bxl-instagram'></i></a>
+                  <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- content -->
+          <div class="col-lg-7 col-12 order-1 order-lg-2">
+            <div class="about-card">
+              <!-- <h2>سلام</h2> -->
+              <p>
+                RazDevelop یک استودیوی طراحی وب است که با تمرکز بر طراحی مدرن،
+                تجربه کاربری و سرعت بالا، سایت‌هایی می‌سازد که واقعاً برای کسب‌وکار
+                کار می‌کنند؛ نه فقط برای نمایش.
+              </p>
+
+              <ul class="d-flex gap-4 justify-content-center">
+                <li><span class="num">+3</span><span class="label">سال تجربه</span></li>
+                <li><span class="num">+30</span><span class="label">پروژه</span></li>
+                <li><span class="num">100%</span><span class="label">ریسپانسیو</span></li>
+              </ul>
+
+              <a href="contact.html" class="btn primary">شروع همکاری</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- skills -->
+    <section class="section">
+      <h2 class="section-title">تخصص‌ها</h2>
+
+      <div class="container">
+        <div class="row g-3 justify-content-center">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="skill-card"><i class='bx bxl-html5'></i><span>HTML5</span></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="skill-card"><i class='bx bxl-css3'></i><span>CSS3</span></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="skill-card"><i class='bx bxl-javascript'></i><span>JavaScript</span></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="skill-card"><i class='bx bxl-bootstrap'></i><span>bootstrap</span></div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- content -->
-      <div class="about-card">
-        <!-- <h2>سلام</h2> -->
-        <p>
-          RazDevelop یک استودیوی طراحی وب است که با تمرکز بر طراحی مدرن،
-          تجربه کاربری و سرعت بالا، سایت‌هایی می‌سازد که واقعاً برای کسب‌وکار
-          کار می‌کنند؛ نه فقط برای نمایش.
-        </p>
+    <!-- timeline -->
+    <section class="section">
+      <h2 class="section-title">مسیر کاری</h2>
 
-        <ul class="about-stats">
-          <li><span class="num">+3</span><span class="label">سال تجربه</span></li>
-          <li><span class="num">+30</span><span class="label">پروژه</span></li>
-          <li><span class="num">100%</span><span class="label">ریسپانسیو</span></li>
-        </ul>
-
-        <a href="contact.html" class="btn primary">شروع همکاری</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- skills -->
-  <section class="section">
-    <h2 class="section-title">تخصص‌ها</h2>
-
-    <div class="skills-grid">
-      <div class="skill-card"><i class='bx bxl-html5'></i><span>HTML5</span></div>
-      <div class="skill-card"><i class='bx bxl-css3'></i><span>CSS3</span></div>
-      <div class="skill-card"><i class='bx bxl-javascript'></i><span>JavaScript</span></div>
-      <div class="skill-card"><i class='bx bxl-bootstrap'></i><span>bootstrap</span></div>
-    </div>
-  </section>
-
-  <!-- timeline -->
-  <section class="section">
-    <h2 class="section-title">مسیر کاری</h2>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <span class="time">2024 - اکنون</span>
-        <div class="timeline-content">
-          <h3>Front-End Developer</h3>
-          <p>
-            طراحی و توسعه وب‌سایت‌های مدرن با تمرکز بر UI/UX،
-            منوی دیجیتال و صفحات لندینگ بهینه.
-          </p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="time">2024 - اکنون</span>
+          <div class="timeline-content">
+            <h3>Front-End Developer</h3>
+            <p>
+              طراحی و توسعه وب‌سایت‌های مدرن با تمرکز بر UI/UX،
+              منوی دیجیتال و صفحات لندینگ بهینه.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-</main>
+  </main>
 
-<footer class="footer">
-  <p>© 2025 RazDevelop | تمامی حقوق محفوظ است</p>
-  <a href="#top" class="to-top"><i class='bx bx-up-arrow-alt'></i></a>
-</footer>
+  <footer class="footer">
+    <p>© 2025 RazDevelop | تمامی حقوق محفوظ است</p>
+    <a href="#top" class="to-top"><i class='bx bx-up-arrow-alt'></i></a>
+  </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

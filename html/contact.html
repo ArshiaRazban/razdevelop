@@ -4,198 +4,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تماس با من - پورتفولیو مدرن</title>
+    <title>تماس با ما | RazDevelop</title>
 
-    <!-- box icons -->
+    <!-- icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet preload">
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Changa:wght@200..800&family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
-        rel="stylesheet preload">
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Changa:wght@200..800&display=swap"
+        rel="stylesheet">
 
-
-    <!-- custom css -->
-    <link rel="stylesheet" href="../style/style_2.css">
+    <!-- style -->
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
 
     <!-- header navigation -->
-    <header class="header" id="header">
-        <a href="../index.html" class="brand">
-            <!-- <i class='bx bx-shape-polygon'></i> -->
-            <span>Raz Develop</span>
-        </a>
-        <nav class="menu">
-            <a href="../index.html" class="menu-link active"><i class='bx bx-home'></i><span>خانه</span></a>
-            <a href="about.html" class="menu-link"><i class='bx bx-user'></i><span>درباره</span></a>
-            <a href="restaurant-menu.html" class="menu-link"><i class='bx bx-bulb'></i><span>منو دیجیتال</span></a>
-            <a href="#work" class="menu-link"><i class='bx bx-layout'></i><span>نمونه‌کار</span></a>
-            <a href="services.html" class="menu-link"><i class='bx bx-envelope'></i><span>ارتباط</span></a>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark" dir="ltr">
+            <div class="container-fluid">
+
+                <!-- Brand -->
+                <a class="navbar-brand fw-semibold fs-4" href="#home">
+                    Raz Develop
+                </a>
+
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu -->
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3" dir="rtl">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../index.html">
+                                <i class='bx bx-home'></i> خانه
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">
+                                <i class='bx bx-user'></i> درباره
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="restaurant-menu.html">
+                                <i class='bx bx-restaurant'></i> منو دیجیتال
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class='bx bx-layout'></i> نمونه‌کار
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">
+                                <i class='bx bx-envelope'></i> ارتباط
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </nav>
     </header>
 
-    <!-- contact page content -->
-    <section class="contact-page" id="contact">
-        <h2 class="heading">تماس با <span>من!</span></h2>
+    <!-- main -->
+    <main class="page contact-page">
 
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>بیایید با هم صحبت کنیم</h3>
-                <p>آماده‌ام تا در پروژه بعدی شما همکاری کنم. بیایید درباره ایده‌ها و اهداف شما صحبت کنیم.</p>
+        <!-- contact info -->
+        <section class="section">
+            <div class="section-head">
+                <h2 class="heading">تماس با <span>من</span></h2>
+            </div>
 
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <i class='bx bx-envelope'></i>
-                        <div class="contact-text">
-                            <h4>ایمیل</h4>
-                            <p>your.email@example.com</p>
+            <div class="section-body">
+                <div class="contact-container">
+
+                    <div class="contact-info">
+                        <h3>بیایید با هم صحبت کنیم</h3>
+                        <p>
+                            آماده‌ام تا درباره پروژه، ایده یا همکاری بعدی شما صحبت کنیم.
+                        </p>
+
+                        <div class="contact-details">
+
+                            <div class="contact-item">
+                                <i class='bx bx-envelope'></i>
+                                <div class="contact-text">
+                                    <h4>ایمیل</h4>
+                                    <p>your.email@example.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class='bx bx-phone'></i>
+                                <div class="contact-text">
+                                    <h4>تلفن</h4>
+                                    <p>+98 912 345 6789</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class='bx bx-map'></i>
+                                <div class="contact-text">
+                                    <h4>آدرس</h4>
+                                    <p>تهران، ایران</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class='bx bx-time'></i>
+                                <div class="contact-text">
+                                    <h4>ساعات کاری</h4>
+                                    <p>شنبه تا پنج‌شنبه، 9 تا 18</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="social-media">
+                            <h4>شبکه‌های اجتماعی</h4>
+                            <div class="social-links">
+                                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                                <a href="#"><i class='bx bxl-github'></i></a>
+                                <a href="#"><i class='bx bxl-twitter'></i></a>
+                                <a href="#"><i class='bx bxl-instagram'></i></a>
+                                <a href="#"><i class='bx bxl-telegram'></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- faq -->
+        <section class="section">
+            <div class="section-head">
+                <h2 class="heading">سوالات <span>متداول</span></h2>
+            </div>
+
+            <div class="section-body">
+                <div class="faq-container">
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>چه مدت طول می‌کشد تا پروژه تکمیل شود؟</h3>
+                            <i class='bx bx-plus'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                بسته به ابعاد پروژه، از ۱ هفته تا چند ماه متغیر است.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="contact-item">
-                        <i class='bx bx-phone'></i>
-                        <div class="contact-text">
-                            <h4>تلفن</h4>
-                            <p>+98 912 345 6789</p>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>آیا امکان تغییر بعد از تحویل وجود دارد؟</h3>
+                            <i class='bx bx-plus'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                تغییرات جزئی تا ۳۰ روز رایگان است.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="contact-item">
-                        <i class='bx bx-map'></i>
-                        <div class="contact-text">
-                            <h4>آدرس</h4>
-                            <p>تهران، ایران</p>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>آیا سورس پروژه تحویل داده می‌شود؟</h3>
+                            <i class='bx bx-plus'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                بله، پس از تسویه کامل، کل سورس در اختیار شماست.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="contact-item">
-                        <i class='bx bx-time'></i>
-                        <div class="contact-text">
-                            <h4>ساعات کاری</h4>
-                            <p>شنبه تا پنج‌شنبه: 9 صبح تا 6 عصر</p>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>آیا پشتیبانی ارائه می‌دهید؟</h3>
+                            <i class='bx bx-plus'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                بله، پشتیبانی فنی و نگهداری پروژه انجام می‌شود.
+                            </p>
                         </div>
                     </div>
-                </div>
 
-                <div class="social-media contact-item">
-                    <h4>شبکه‌های اجتماعی</h4>
-                    <div class="social-links">
-                        <a href="#"><i class='bx bxl-linkedin'></i></a>
-                        <a href="#"><i class='bx bxl-github'></i></a>
-                        <a href="#"><i class='bx bxl-twitter'></i></a>
-                        <a href="#"><i class='bx bxl-instagram'></i></a>
-                        <a href="#"><i class='bx bxl-telegram'></i></a>
-                    </div>
-                </div>
-
-            </div>
-<!-- 
-            <div class="contact-form-container">
-                <form class="contact-form" action="#" method="post">
-                    <div class="input-box">
-                        <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
-                        <input type="email" name="email" placeholder="آدرس ایمیل" required>
-                    </div>
-                    <div class="input-box">
-                        <input type="tel" name="phone" placeholder="شماره موبایل">
-                        <input type="text" name="subject" placeholder="موضوع" required>
-                    </div>
-                    <textarea name="message" rows="8" placeholder="پیام شما" required></textarea>
-                    <button type="submit" class="btn">ارسال پیام</button>
-                </form>
-            </div>
-        </div> -->
-
-        <!-- FAQ section -->
-        <div class="faq-section">
-            <h2 class="heading">سوالات <span>متداول</span></h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>چه مدت طول می‌کشد تا پروژه تکمیل شود؟</h3>
-                        <i class='bx bx-plus'></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>مدت زمان تکمیل پروژه بستگی به پیچیدگی و اندازه پروژه دارد. معمولاً پروژه‌های ساده 1-2 هفته،
-                            پروژه‌های متوسط 2-4 هفته و پروژه‌های پیچیده 1-3 ماه طول می‌کشد.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>آیا امکان تغییرات بعد از تحویل پروژه وجود دارد؟</h3>
-                        <i class='bx bx-plus'></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>بله، تغییرات جزئی تا 30 روز پس از تحویل رایگان است. برای تغییرات بزرگ‌تر، هزینه جداگانه
-                            محاسبه می‌شود.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>آیا کدهای پروژه به من تحویل داده می‌شود؟</h3>
-                        <i class='bx bx-plus'></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>بله، تمام کدهای پروژه پس از تکمیل و دریافت کامل هزینه، به شما تحویل داده می‌شود.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>آیا خدمات پشتیبانی ارائه می‌دهید؟</h3>
-                        <i class='bx bx-plus'></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>بله، خدمات پشتیبانی فنی و نگهداری وب‌سایت با قیمت‌های مناسب ارائه می‌دهم.</p>
-                    </div>
                 </div>
             </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>آیا خدمات پشتیبانی ارائه می‌دهید؟</h3>
-                        <i class='bx bx-plus'></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>بله، خدمات پشتیبانی فنی و نگهداری وب‌سایت با قیمت‌های مناسب ارائه می‌دهم.</p>
-                    </div>
-                </div>
-        </div>
+        </section>
 
-        <!-- Map section -->
-        <!-- <div class="map-section">
-            <h2 class="heading">موقعیت <span>من</span></h2>
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.5!2d51.389!3d35.689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd%3A0xf0b3697c567024bc!2sTehran%2C%20Iran!5e0!3m2!1sen!2sus!4v1234567890"
-                    width="100%" height="400" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div> -->
-    </section>
+    </main>
 
-    <!-- footer design -->
+    <!-- footer -->
     <footer class="footer">
         <div class="footer-text">
-            <p>کپی‌رایت &copy; 2025 توسط نام شما | تمام حقوق محفوظ است.</p>
+            <p>کپی‌رایت © 2025 RazDevelop | تمام حقوق محفوظ است</p>
         </div>
-
         <div class="footer-iconTop">
-            <a href="#services"><i class='bx bx-up-arrow-alt'></i></a>
+            <a href="#header"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
 
-    <!-- custom js -->
     <script src="../js/script.js"></script>
 </body>
 

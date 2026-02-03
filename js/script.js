@@ -1,43 +1,56 @@
-const links = document.querySelectorAll('.menu-link');
-const sections = [...document.querySelectorAll('section')];
-const header = document.getElementById('header');
+// Header scroll effect
+const header = document.querySelector('.glass-nav');
 
-// active link on scroll
-const setActive = () => {
-    const y = window.scrollY + window.innerHeight / 2;
-    let current = 'home';
-    for (const s of sections) {
-        if (y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) {
-            current = s.id;
-        }
-    }
-    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${current}`));
-};
-window.addEventListener('scroll', setActive);
-setActive();
+if (header) {
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 50);
+  });
+}
 
-// smooth scroll
-links.forEach(a => a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-        e.preventDefault();
-        window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
-    }
-}));
 
-// header scroll effect
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.style.background = 'rgba(24, 24, 27, 0.65)';
-        header.style.backdropFilter = 'blur(20px)';
-    } else {
-        header.style.background = 'rgba(24, 24, 27, 0.65)';
-        header.style.backdropFilter = 'blur(20px)';
-    }
+    header.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// for button portfolios
 
+const links = document.querySelectorAll('.nav-link');
+
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section');
+
+function setActiveLink() {
+    const scrollPos = window.scrollY + 120;
+
+    sections.forEach(section => {
+        if (
+            scrollPos >= section.offsetTop &&
+            scrollPos < section.offsetTop + section.offsetHeight
+        ) {
+            navLinks.forEach(link => {
+                link.classList.toggle(
+                    'active',
+                    link.getAttribute('href') === `#${section.id}`
+                );
+            });
+        }
+    });
+}
+
+window.addEventListener('scroll', setActiveLink);
+
+const navbarCollapse = document.querySelector('.navbar-collapse');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (navbarCollapse.classList.contains('show')) {
+            new bootstrap.Collapse(navbarCollapse).hide();
+        }
+    });
+});
+
+
+
+// Portfolio order modal + WhatsApp
 document.addEventListener('DOMContentLoaded', () => {
 
     const orderBtns = document.querySelectorAll('.order-btn');
@@ -47,61 +60,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const githubInput = document.getElementById('githubInput');
     const orderForm = document.getElementById('orderForm');
 
-    // باز کردن مودال + ست پروژه و لینک گیت
     orderBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             projectInput.value = btn.dataset.project;
-            githubInput.value = btn.dataset.github || ""; // اگر لینک نبود خالی میشه
+            githubInput.value = btn.dataset.github || "";
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
         });
     });
 
-    // بستن مودال
-    closeBtn.addEventListener('click', () => {
+    closeBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', e => e.target === modal && closeModal());
+
+    function closeModal() {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
-    });
+    }
 
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
-
-    // ارسال فرم به واتساپ
-    orderForm.addEventListener("submit", function (e) {
+    orderForm.addEventListener("submit", e => {
         e.preventDefault();
 
-        let name = orderForm.querySelector("input[name='name']").value.trim();
-        let phone = orderForm.querySelector("input[name='phone']").value.trim();
-        let message = orderForm.querySelector("textarea[name='message']").value.trim();
-        let project = projectInput.value.trim();
-        let github = githubInput.value.trim();
+        const name = orderForm.name.value.trim();
+        const phone = orderForm.phone.value.trim();
+        const message = orderForm.message.value.trim();
 
         if (!name || !phone) {
             alert("لطفاً نام و شماره تماس را وارد کنید");
             return;
         }
 
-        let finalMessage =
-            "🔰 *سفارش جدید* \n\n" +
-            "👤 *نام:* " + name + "\n" +
-            "📞 *شماره تماس:* " + phone + "\n" +
-            "📌 *پروژه انتخابی:* " + project + "\n" +
-            "💻 *لینک GitHub:* " + github + "\n" +
-            "📝 *توضیحات:* " + message;
+        const finalMessage = `
+🔰 سفارش جدید
 
-        let encoded = encodeURIComponent(finalMessage);
+👤 نام: ${name}
+📞 تماس: ${phone}
+📌 پروژه: ${projectInput.value}
+💻 GitHub: ${githubInput.value}
+📝 توضیحات: ${message}
+        `;
 
-        let whatsappNumber = "989001721385"; // شماره بدون + و صفر
-
-        let url = `https://wa.me/${whatsappNumber}?text=${encoded}`;
-
-        window.open(url, "_blank");
+        window.open(
+            `https://wa.me/989001721385?text=${encodeURIComponent(finalMessage)}`,
+            "_blank"
+        );
     });
 
 });
-
-

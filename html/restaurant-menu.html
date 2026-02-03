@@ -51,29 +51,70 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet preload">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Changa:wght@200..800&family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+        rel="stylesheet preload">
 
     <!-- styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
 
     <!-- header navigation -->
-    <header class="header" id="header">
-        <a href="../index.html" class="brand">
-            <!-- <i class='bx bx-shape-polygon'></i> -->
-            <span>Raz Develop</span>
-        </a>
-        <nav class="menu">
-            <a href="../index.html" class="menu-link active"><i class='bx bx-home'></i><span>خانه</span></a>
-            <a href="about.html" class="menu-link"><i class='bx bx-user'></i><span>درباره</span></a>
-            <a href="restaurant-menu.html" class="menu-link"><i class='bx bx-bulb'></i><span>منو دیجیتال</span></a>
-            <a href="#work" class="menu-link"><i class='bx bx-layout'></i><span>نمونه‌کار</span></a>
-            <a href="services.html" class="menu-link"><i class='bx bx-envelope'></i><span>ارتباط</span></a>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark" dir="ltr">
+            <div class="container-fluid">
+
+                <!-- Brand -->
+                <a class="navbar-brand fw-semibold fs-4" href="#home">
+                    Raz Develop
+                </a>
+
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu -->
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3" dir="rtl">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../index.html">
+                                <i class='bx bx-home'></i> خانه
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">
+                                <i class='bx bx-user'></i> درباره
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="restaurant-menu.html">
+                                <i class='bx bx-restaurant'></i> منو دیجیتال
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class='bx bx-layout'></i> نمونه‌کار
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">
+                                <i class='bx bx-envelope'></i> ارتباط
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </nav>
     </header>
-
 
 
     <!-- main content -->
@@ -110,154 +151,162 @@
             </section>
 
 
+            <!-- work -->
+            <section id="work" class="section work">
 
-            <p class="section-desc">
-                طراحی منوی آنلاین حرفه‌ای برای رستوران‌ها و کافی‌شاپ‌ها با QR Code، سرعت بالا و سازگار با موبایل
-            </p>
-            <h2 class="section-subtitle">
-                نمونه‌کارهای طراحی منوی دیجیتال رستوران
-            </h2>
+                <p class="section-desc">
+                    طراحی منوی آنلاین حرفه‌ای برای رستوران‌ها و کافی‌شاپ‌ها با QR Code، سرعت بالا و سازگار با موبایل
+                </p>
+                <h2 class="section-subtitle">
+                    قالب های منوی دیجیتال رستوران
+                </h2>
+                <div class="row g-4">
 
-            <div class="work-grid">
-
-                <article class="work-card">
-                    <img src="../img/coffee_shop_website_Global.webp" loading="lazy" decoding="async"
-                        alt="طراحی سایت کافی‌شاپ حرفه‌ای با منوی دیجیتال و ظاهر مدرن — نمونه‌کار RazDevelop">
-                    <div class="work-info">
-                        <h3>سایت کافی شاپ</h3>
-                        <a href="https://arshiarazban.github.io/coffee_shop_website_Global/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn"
-                            data-github="https://github.com/arshiarazban/coffee_shop_global"
-                            data-project="سایت کافی شاپ">ثبت سفارش</button>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="work-card">
+                            <img src="../img/coffee_shop_website_Global.webp" loading="lazy" decoding="async"
+                                alt="طراحی سایت کافی‌شاپ حرفه‌ای با منوی دیجیتال و ظاهر مدرن — نمونه‌کار RazDevelop">
+                            <div class="work-info">
+                                <h3>سایت کافی شاپ</h3>
+                                <a href="https://arshiarazban.github.io/coffee_shop_website_Global/"
+                                    class="btn tiny">مشاهده</a>
+                                <button class="btn tiny order-btn"
+                                    data-github="https://github.com/arshiarazban/coffee_shop_global"
+                                    data-project="سایت کافی شاپ">ثبت سفارش</button>
+                            </div>
+                        </article>
                     </div>
-                </article>
 
-                <article class="work-card">
-                    <img src="../img/Fruit-Soda-web.webp" loading="lazy" decoding="async"
-                        alt="نمونه‌کار طراحی سایت سه‌بعدی مناسب معرفی رستوران و کافه — RazDevelop">
-                    <div class="work-info">
-                        <h3>سایت 3بعدی(2)</h3>
-                        <a href="https://arshiarazban.github.io/Fruit-Soda-web/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn" data-github="https://arshiarazban.github.io/Fruit-Soda-web/"
-                            data-project="سایت 3بعدی(2)">ثبت سفارش</button>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="work-card">
+                            <img src="../img/coffee_shop_website_IR.webp" loading="lazy" decoding="async"
+                                alt="طراحی سایت فروشگاه قهوه با تجربه کاربری روان و طراحی حرفه‌ای — RazDevelop">
+                            <div class="work-info">
+                                <h3>فروشگاه قهوه</h3>
+                                <a href="https://arshiarazban.github.io/coffee_shop_website_IR/"
+                                    class="btn tiny">مشاهده</a>
+                                <button class="btn tiny order-btn"
+                                    data-github="https://arshiarazban.github.io/coffee_shop_website_IR/"
+                                    data-project="فروشگاه قهوه">ثبت سفارش</button>
+                            </div>
+                        </article>
                     </div>
-                </article>
 
-                <article class="work-card">
-                    <img src="../img/coffee_shop_website_IR.webp" loading="lazy" decoding="async"
-                        alt="طراحی سایت فروشگاه قهوه با تجربه کاربری روان و طراحی حرفه‌ای — RazDevelop">
-                    <div class="work-info">
-                        <h3>فروشگاه قهوه</h3>
-                        <a href="https://arshiarazban.github.io/coffee_shop_website_IR/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn"
-                            data-github="https://arshiarazban.github.io/coffee_shop_website_IR/"
-                            data-project="فروشگاه قهوه">ثبت سفارش</button>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="work-card">
+                            <img src="../img/panino menu.webp" loading="lazy" decoding="async"
+                                alt="طراحی منوی دیجیتال رستوران پانینو با گرافیک جذاب و سرعت بالا — RazDevelop">
+                            <div class="work-info">
+                                <h3>منوی رستوران پانینو</h3>
+                                <a href="https://paninosandwichbar.github.io/Menu/" class="btn tiny">مشاهده</a>
+                                <button class="btn tiny order-btn"
+                                    data-github="https://paninosandwichbar.github.io/Menu/"
+                                    data-project="منوی رستوران پانینو">ثبت سفارش</button>
+                            </div>
+                        </article>
                     </div>
-                </article>
 
-                <article class="work-card">
-                    <img src="../img/panino menu.webp" loading="lazy" decoding="async"
-                        alt="طراحی منوی دیجیتال رستوران پانینو با گرافیک جذاب و سرعت بالا — RazDevelop">
-                    <div class="work-info">
-                        <h3>منوی رستوران پانینو</h3>
-                        <a href="https://paninosandwichbar.github.io/Menu/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn" data-github="https://paninosandwichbar.github.io/Menu/"
-                            data-project="منوی رستوران پانینو">ثبت سفارش</button>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="work-card">
+                            <img src="../img/grilli.webp" loading="lazy" decoding="async"
+                                alt="نمونه‌کار طراحی منوی دیجیتال برای رستوران گریلی — RazDevelop">
+                            <div class="work-info">
+                                <h3>منوی رستوران گریلی</h3>
+                                <a href="https://arshiarazban.github.io/Restaurant_website_menu_grilli/"
+                                    class="btn tiny">مشاهده</a>
+                                <button class="btn tiny order-btn"
+                                    data-github="https://arshiarazban.github.io/Restaurant_website_menu_grilli/"
+                                    data-project="منوی رستوران گریلی">ثبت سفارش</button>
+                            </div>
+                        </article>
                     </div>
-                </article>
 
-                <article class="work-card">
-                    <img src="../img/grilli.webp" loading="lazy" decoding="async"
-                        alt="نمونه‌کار طراحی منوی دیجیتال برای رستوران گریلی — RazDevelop">
-                    <div class="work-info">
-                        <h3>منوی رستوران گریلی</h3>
-                        <a href="https://arshiarazban.github.io/Restaurant_website_menu_grilli/"
-                            class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn"
-                            data-github="https://arshiarazban.github.io/Restaurant_website_menu_grilli/"
-                            data-project="منوی رستوران گریلی">ثبت سفارش</button>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="work-card">
+                            <img src="../img/coffee_websit.webp" loading="lazy" decoding="async"
+                                alt="طراحی منوی دیجیتال حرفه‌ای برای کافه رستوران — نمونه‌کار RazDevelop">
+                            <div class="work-info">
+                                <h3>منوی کافه رستوران</h3>
+                                <a href="https://arshiarazban.github.io/menu-coffeeshop/" class="btn tiny">مشاهده</a>
+                                <button class="btn tiny order-btn"
+                                    data-github="https://arshiarazban.github.io/menu-coffeeshop/"
+                                    data-project="منوی کافه رستوران">ثبت سفارش</button>
+                            </div>
+                        </article>
                     </div>
-                </article>
 
-                <article class="work-card">
-                    <img src="../img/coffee_websit.webp" loading="lazy" decoding="async"
-                        alt="طراحی منوی دیجیتال حرفه‌ای برای کافه رستوران — نمونه‌کار RazDevelop">
-                    <div class="work-info">
-                        <h3>منوی کافه رستوران</h3>
-                        <a href="https://arshiarazban.github.io/menu-coffeeshop/" class="btn tiny">مشاهده</a>
-                        <button class="btn tiny order-btn" data-github="https://arshiarazban.github.io/menu-coffeeshop/"
-                            data-project="منوی کافه رستوران">ثبت سفارش</button>
-                    </div>
-                </article>
-
-
-                <!-- <article class="work-card">
-                    <img src="../img/Technology-and-business-information-site.webp" loading="lazy" decoding="async" alt="Technology-and-business-information-site">
+                    <!-- <article class="work-card">
+                    <img src="img/Technology-and-business-information-site.webp" loading="lazy" decoding="async" alt="Technology-and-business-information-site">
                     <div class="work-info">
                         <h3>سایت خبرگزاری</h3>
                         <a href="https://arshiarazban.github.io/Technology-and-business-information-site/" class="btn tiny">مشاهده</a>
                     </div>
                 </article> -->
 
-            </div>
-        </section>
+                </div>
+            </section>
+    </main>
 
-        <!-- footer design -->
-        <footer class="footer">
-            <p>© 2025 Raz_develop Portfolio | همه حقوق محفوظ است.</p>
-            <a class="to-top" href="#home" aria-label="back to top"><i class='bx bx-up-arrow-alt'></i></a>
-        </footer>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>کپی‌رایت © 2025 RazDevelop | تمام حقوق محفوظ است</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#header"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>فرم سفارش پروژه</h2>
+            <form id="orderForm">
 
-        <div id="orderModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>فرم سفارش پروژه</h2>
-                <form id="orderForm">
-
-                    <div class="container">
-                        <div class="form reservation-form bg-black-10">
-                            <div class="form-left">
-                                <div class="input-wrapper">
-                                    <input type="text" name="name" placeholder="نام شما" autocomplete="off"
-                                        class="input-field">
-                                    <input type="tel" name="phone" placeholder="شماره تلفن" autocomplete="off"
-                                        class="input-field">
-                                    <input type="hidden" id="githubInput" name="github_link">
-                                </div>
-                                <div class="input-wrapper">
-                                    <textarea name="message" placeholder="پیام شما" autocomplete="off"
-                                        class="input-field"></textarea>
-                                </div>
-                                <div class="input-tel">
-                                    <h2 class="headline-1 text-center">تماس با ما</h2>
-
-                                    <a href="tel:+989982160057"
-                                        class="body-1 contact-number hover-underline">09982160057</a>
-                                </div>
-
-                                <!-- مقدار پروژه از دکمه سفارش بده وارد این فیلد می‌شود -->
-                                <input type="hidden" name="project" id="projectInput">
-
-                                <button type="submit" style="margin: 5px;" class="btn primary">ارسال سفارش</button>
+                <div class="container">
+                    <div class="form reservation-form bg-black-10">
+                        <div class="form-left">
+                            <div class="input-wrapper">
+                                <input type="text" name="name" placeholder="نام شما" autocomplete="off"
+                                    class="input-field">
+                                <input type="tel" name="phone" placeholder="شماره تلفن" autocomplete="off"
+                                    class="input-field">
+                                <input type="hidden" id="githubInput" name="github_link">
                             </div>
+                            <div class="input-wrapper">
+                                <textarea name="message" placeholder="پیام شما" autocomplete="off"
+                                    class="input-field"></textarea>
+                            </div>
+                            <div class="input-tel">
+                                <h2 class="headline-1 text-center">تماس با ما</h2>
+
+                                <a href="tel:+989982160057"
+                                    class="body-1 contact-number hover-underline">09982160057</a>
+                            </div>
+
+                            <!-- مقدار پروژه از دکمه سفارش بده وارد این فیلد می‌شود -->
+                            <input type="hidden" name="project" id="projectInput">
+
+                            <button type="submit" style="margin: 5px;" class="btn primary">ارسال سفارش</button>
                         </div>
                     </div>
-                </form>
+                </div>
+            </form>
 
-            </div>
         </div>
+    </div>
 
-        <script src="../js/script.js" defer></script>
+    <script src="../js/script.js" defer></script>
 
-        <!-- GA4 -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1714722546a466b9"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-1714722546a466b9');
-        </script>
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1714722546a466b9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-1714722546a466b9');
+    </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 
