@@ -1,20 +1,19 @@
 :root {
   --bg: #09090b;
-  /* dark gray from palette */
+  --bg-main: #09090b;
+  --bg-soft: #0b0b0d;
+  --glow-soft: rgba(255, 255, 255, 0.04);
+
   --bg-transparent: rgba(24, 24, 27, 0.65);
   --card: #18181b;
-  /* glass dark gray */
-  --text: #f9fafb;
-  /* light gray from palette */
-  --muted: #6a7282;
-  /* medium gray from palette */
-  --primary: #00c950;
-  /* green from palette */
-  --primary-2: #05df72;
-  /* lighter green from palette */
-  --accent: #7bf1a8;
-  /* light green accent */
-  --ring: rgba(0, 201, 80, .35);
+
+  --ds-50: #fdfdfd;
+  --ds-100: #cfcfcf;
+  --ds-400: #646464;
+  --ds-700: #1a1a1a;
+
+  --text: var(--ds-50);
+  --muted: var(--ds-100);
 }
 
 * {
@@ -35,9 +34,10 @@ body {
   padding-top: 80px;
   margin: 0;
   font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
-  background: radial-gradient(1200px 800px at 10% -10%, rgba(0, 201, 80, .15), transparent),
-    radial-gradient(1000px 700px at 110% 10%, rgba(5, 223, 114, .12), transparent),
-    var(--bg);
+  background:
+    radial-gradient(1200px 800px at 15% -10%, var(--glow-soft), transparent),
+    radial-gradient(1000px 700px at 110% 10%, rgba(255, 255, 255, 0.03), transparent),
+    linear-gradient(180deg, var(--bg-soft), var(--bg-main));
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -69,11 +69,11 @@ body {
 
 .header .brand i {
   font-size: 24px;
-  color: var(--accent);
+  color: var(--ds-100);
 }
 
 .menu-link.active {
-  color: var(--primary);
+  color: var(--ds-50);
   background: rgba(24, 24, 27, 0.8);
   border-radius: 20px;
   border: 1px solid;
@@ -130,7 +130,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--primary);
+  color: var(--ds-50);
   background: rgba(24, 24, 27, 0.8);
 }
 
@@ -141,6 +141,10 @@ body {
 /* sections */
 .section {
   padding: 80px 0;
+}
+
+.section-title {
+  margin-bottom: 2.5rem;
 }
 
 .section-head {
@@ -165,26 +169,45 @@ body {
   margin-bottom: 2rem;
 }
 
-/* faq section */
-.faq-container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  gap: 1.5rem;
-}
-
-.faq-item {
-  padding: 1.5rem;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.03);
+/* FAQ cards style */
+.faq-cards .accordion-item {
+  text-align: right;
+  padding-right: 1.5rem;
+  padding-left: 3rem;
+  background: var(--bg-transparent);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  backdrop-filter: blur(16px);
 }
 
-.faq-question {
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
+.faq-cards .accordion-button {
+  background: transparent;
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: none;
+  margin-left: 1rem;
 }
+
+.faq-cards .accordion-button::after {
+  filter: invert(1);
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.faq-cards .accordion-body {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+/* hover subtle */
+.faq-cards .accordion-item:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
 
 /* heading */
 .heading {
@@ -194,13 +217,11 @@ body {
 }
 
 .heading span {
-  color: var(--primary);
+  color: var(--ds-50);
 }
 
 /* services */
 .services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -220,7 +241,7 @@ body {
 
 .services-box i {
   font-size: 2.2rem;
-  color: var(--primary);
+  color: var(--ds-50);
   margin-bottom: 0.5rem;
 }
 
@@ -252,7 +273,7 @@ body {
   content: "•";
   position: absolute;
   right: -1rem;
-  color: var(--primary);
+  color: var(--ds-100);
 }
 
 .services-box .btn {
@@ -283,7 +304,7 @@ body {
 .hero-text h1 {
   margin: 0 0 12px;
   font-size: 40px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
+  background: linear-gradient(90deg, var(--ds-50), var(--ds-700));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -340,7 +361,6 @@ body {
   font-size: 1em;
   padding: 1.5em 1em;
   width: 21rem;
-  box-shadow: 0 10px 10px 10px rgba(0, 201, 80, .35);
   border-radius: 12px;
   position: relative;
   overflow: hidden;
@@ -397,8 +417,9 @@ body {
 }
 
 .btn.primary {
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  background: linear-gradient(135deg, var(--ds-50), var(--ds-400));
   border-color: transparent;
+  margin: 1rem;
 }
 
 .btn.ghost {
@@ -426,6 +447,7 @@ body {
 
 .about-card h2 {
   margin: 0 0 10px;
+  margin-bottom: 1.5rem;
 }
 
 .about-card p,
@@ -450,11 +472,39 @@ body {
 .about-stats .num {
   font-size: 1.6rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--ds-50);
 }
 
 .about-stats .label {
   font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.about-stats-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 2rem;
+  backdrop-filter: blur(14px);
+}
+
+.metric-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 1rem;
+  /* margin: .25rem; */
+  text-align: center;
+}
+
+.metric-num {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 800;
+}
+
+.metric-label {
+  font-size: 0.8rem;
   opacity: 0.7;
 }
 
@@ -535,7 +585,8 @@ body {
   background: var(--card);
   border: 1px solid #09090b;
   border-radius: 20px;
-  padding: 16px
+  padding: 1rem;
+  margin: .25rem;
 }
 
 .skill-card {
@@ -549,7 +600,7 @@ body {
 
 .skill-card i {
   font-size: 2rem;
-  color: var(--primary);
+  color: var(--ds-50);
 }
 
 .skill-card span {
@@ -560,7 +611,7 @@ body {
 
 .skill i {
   font-size: 28px;
-  color: var(--accent)
+  color: var(--ds-100)
 }
 
 .skill h3 {
@@ -578,7 +629,7 @@ body {
 .bar span {
   display: block;
   height: 100%;
-  background: linear-gradient(90deg, var(--primary), var(--accent))
+  background: linear-gradient(90deg, var(--ds-50), var(--ds-400))
 }
 
 /* ----------------------------------------------------------------------------------------------------------------- */
@@ -628,7 +679,7 @@ body {
   padding: 10px 18px;
   margin: 5px;
   border-radius: 10px;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--ds-50);
   font-size: 15px;
   font-weight: 500;
 }
@@ -730,7 +781,7 @@ body {
 
 .timeline-item .time {
   font-size: 0.8rem;
-  color: var(--primary);
+  color: var(--ds-50);
 }
 
 .timeline-content h3 {
@@ -742,14 +793,11 @@ body {
    ============================================================ */
 .form {
   text-align: center;
-  display: flex;
   gap: 25px;
-  flex-wrap: wrap;
 }
 
 /* LEFT SIDE */
 .form-left {
-  flex: 1 1 500px;
   background: rgba(0, 0, 0, 0.35);
   border-radius: 20px;
   padding: 25px;
@@ -758,7 +806,6 @@ body {
 
 /* RIGHT SIDE (INFO) */
 .form-right {
-  flex: 1 1 300px;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 25px;
@@ -798,7 +845,7 @@ select {
 .input-field:focus,
 select:focus {
   background: rgba(255, 255, 255, 0.25);
-  border-color: var(--accent, #ffcc00);
+  border-color: var(--ds-100, #ffcc00);
 }
 
 /* TEXTAREA */
@@ -885,7 +932,7 @@ textarea.input-field {
 
 .contact-item i {
   font-size: 1.6rem;
-  color: var(--accent);
+  color: var(--ds-100);
   flex-shrink: 0;
 }
 
@@ -925,13 +972,13 @@ textarea.input-field {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--accent);
+  color: var(--ds-100);
   font-size: 1.2rem;
   transition: 0.25s;
 }
 
 .social-links a:hover {
-  background: var(--accent);
+  background: var(--ds-100);
   color: #000;
   transform: translateY(-3px);
 }
@@ -989,7 +1036,7 @@ textarea.input-field {
 .contact-card h3 {
   margin-top: 0;
   margin-bottom: 16px;
-  color: var(--accent);
+  color: var(--ds-100);
 }
 
 .contact-card ul {
@@ -1008,11 +1055,11 @@ textarea.input-field {
 
 .contact-card i {
   font-size: 20px;
-  color: var(--accent);
+  color: var(--ds-100);
 }
 
 .contact-card a {
-  color: var(--primary-2);
+  color: var(--primar-2);
   text-decoration: none;
 }
 
@@ -1039,7 +1086,7 @@ textarea.input-field {
 
 .contact-item i {
   font-size: 1.4rem;
-  color: var(--primary);
+  color: var(--ds-50);
 }
 
 
