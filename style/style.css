@@ -1089,6 +1089,60 @@ textarea.input-field {
   color: var(--ds-50);
 }
 
+.contact-form {
+  background: var(--bg-transparent);
+  border: 1px solid var(--card);
+  border-radius: 24px;
+  padding: 2.5rem;
+  backdrop-filter: blur(18px);
+}
+
+.contact-form h3 {
+  color: var(--text);
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text);
+}
+
+.form-control::placeholder {
+  color: var(--muted);
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--accent);
+  box-shadow: none;
+  color: var(--text);
+}
+
+.btn-loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--text);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contact-form {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
 
 /* footer */
 .footer {

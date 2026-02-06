@@ -106,3 +106,68 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+// text messages for contact page
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = contactForm.querySelector('input[type="text"]').value;
+  const phone = contactForm.querySelector('input[type="tel"]').value;
+  const email = contactForm.querySelector('input[type="email"]').value;
+  const message = contactForm.querySelector("textarea").value;
+
+  const text = `
+نام: ${name}
+شماره تماس: ${phone}
+ایمیل: ${email}
+
+پیام:
+${message}
+  `;
+
+  const whatsappNumber = "989001721385"; // بدون +
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+  window.open(url, "_blank");
+});
+
+
+// login of contact page
+
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const btn = document.getElementById("submitBtn");
+  btn.disabled = true;
+  btn.querySelector(".btn-text").classList.add("d-none");
+  btn.querySelector(".btn-loader").classList.remove("d-none");
+
+  setTimeout(() => {
+    // ارسال به واتساپ
+    const name = contactForm.querySelector('input[type="text"]').value;
+    const phone = contactForm.querySelector('input[type="tel"]').value;
+    const email = contactForm.querySelector('input[type="email"]').value;
+    const message = contactForm.querySelector("textarea").value;
+
+    const text = `
+نام: ${name}
+شماره تماس: ${phone}
+ایمیل: ${email}
+
+پیام:
+${message}
+    `;
+
+    const whatsappNumber = "989123456789";
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank");
+
+    btn.disabled = false;
+    btn.querySelector(".btn-text").classList.remove("d-none");
+    btn.querySelector(".btn-loader").classList.add("d-none");
+  }, 600);
+});
+
