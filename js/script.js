@@ -161,7 +161,7 @@ contactForm.addEventListener("submit", function (e) {
 ${message}
     `;
 
-    const whatsappNumber = "989123456789";
+    const whatsappNumber = "989001721385";
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
 
@@ -170,4 +170,5 @@ ${message}
     btn.querySelector(".btn-loader").classList.add("d-none");
   }, 600);
 });
+
 
